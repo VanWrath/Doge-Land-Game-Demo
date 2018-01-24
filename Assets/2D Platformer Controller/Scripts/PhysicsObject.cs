@@ -61,13 +61,13 @@ public class PhysicsObject : MonoBehaviour {
     void Movement(Vector2 move, bool yMovement)
     {
         float distance = move.magnitude;
-        if(distance > minMoveDistance)//checks for collisions if moveing move than a threshold
+        if(distance > minMoveDistance)	//checks for collisions if moving more than a threshold
         {
 			
-			int count = rb2d.Cast(move, contactFilter, hitBuffer, distance + shellRadius);		//check for collisions
-            hitBufferList.Clear();																//clear old list of hit buffer
+	    int count = rb2d.Cast(move, contactFilter, hitBuffer, distance + shellRadius);		//check for collisions
+            hitBufferList.Clear();									//clear old list of hit buffer
 
-			//add new collisions into hit buffer.
+	//add new collisions into hit buffer.
             for(int i = 0; i < count; i++)
             {
                 hitBufferList.Add(hitBuffer[i]);
