@@ -61,15 +61,10 @@ public class PlayerController : PhysicsObject {
 			}
 
 			//run
-			/*if (Input.GetButtonDown ("Fire1")) 
-		{
-			move.x = move.x * 2;
-		}
-
-		else if (Input.GetButtonUp ("Fire1")) 
-		{
-			move.x = move.x * 0.5f;
-		}*/
+			/*if (Input.GetButton ("Fire1")) 
+			{
+				move.x = move.x * 1.5;
+			}*/
 		}
 
 		bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < -0.01f)); //flips sprite so it faces the right direction.
@@ -102,13 +97,6 @@ public class PlayerController : PhysicsObject {
 		}
 		spriteRenderer.enabled = true;
 	}
-
-	/*IEnumerator HurtAnimation()
-	{
-		animator.SetBool ("hurt", true);
-		yield return new WaitForSeconds (0.25f);
-		animator.SetBool ("hurt", false);
-	}*/
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
@@ -169,22 +157,6 @@ public class PlayerController : PhysicsObject {
 		scoreText.text = "Score: " + score;
 	}
 
-	/*private void CheckIfGameOver()
-	{
-		if (health <= 0) {
-			animator.SetBool ("IsDead", true);
-			SoundManager.instance.musicSource.Stop ();
-			StartCoroutine (HurtAnimation ());
-			GameManager.instance.isGameFinished = true;
-			ShowPanels.instance.ShowGameOverPanel ();
-			(ShowPanels.instance.gameOverPanel.GetComponentsInChildren <Text>())[1].text = "Score: " + score;
-
-			Time.timeScale = 0;
-		} else {
-			StartCoroutine (MakeInvulnerable (invulnerableTime));
-		}
-	}
-		*/
 	protected override void Update()
 	{
 		base.Update ();
