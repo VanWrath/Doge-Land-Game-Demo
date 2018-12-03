@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "Dog Land.data.unityweb",
+"asmCodeUrl": "Dog Land.asm.code.unityweb",
+"asmMemoryUrl": "Dog Land.asm.memory.unityweb",
+"asmFrameworkUrl": "Dog Land.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
